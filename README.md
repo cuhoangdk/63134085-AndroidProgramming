@@ -1,1 +1,2 @@
-# 63134085-AndroidProgramming
+# AndroidProgramming
+Tập chơi android

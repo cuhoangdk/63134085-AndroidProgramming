@@ -1,4 +1,4 @@
-package com.cuhoangdk.helloworld;
+package com.cuhoangdk.ex2_linearlayout;
 
 import org.junit.Test;
 

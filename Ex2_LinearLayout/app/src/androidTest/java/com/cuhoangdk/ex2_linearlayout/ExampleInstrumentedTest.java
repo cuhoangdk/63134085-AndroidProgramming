@@ -1,4 +1,4 @@
-package com.cuhoangdk.helloworld;
+package com.cuhoangdk.ex2_linearlayout;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.cuhoangdk.helloworld", appContext.getPackageName());
+        assertEquals("com.cuhoangdk.ex2_linearlayout", appContext.getPackageName());
     }
 }

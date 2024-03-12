@@ -30,58 +30,77 @@ public class MainActivity extends AppCompatActivity {
     }
     public void XuLyCong(View v){
         //Lấy dữ liệu
+        try {
+            String soThu1 = editTextSo1.getText().toString();
+            String soThu2 = editTextSo2.getText().toString();
+            float soA = Float.parseFloat(soThu1);
+            float soB = Float.parseFloat(soThu2);
+            //tính toán
+            float tong = soA + soB;
+            //Hiện kết quả
 
-        String soThu1 =editTextSo1.getText().toString();
-        String soThu2 =editTextSo2.getText().toString();
-        float soA = Float.parseFloat(soThu1);
-        float soB = Float.parseFloat(soThu2);
-        //tính toán
-        float tong = soA +soB;
-        //Hiện kết quả
-
-        String ketQua = String.valueOf(tong);
-        editTextKetQua.setText(ketQua);
+            String ketQua = String.valueOf(tong);
+            editTextKetQua.setText(ketQua);
+        }
+        catch (NumberFormatException e)
+        {
+            Toast.makeText(this, "Vui lòng nhập số hợp lệ", Toast.LENGTH_SHORT).show();
+        }
     }
     public void XuLyTru(View v){
-        //Lấy dữ liệu
+        try {
+            String soThu1 = editTextSo1.getText().toString();
+            String soThu2 = editTextSo2.getText().toString();
+            float soA = Float.parseFloat(soThu1);
+            float soB = Float.parseFloat(soThu2);
+            //tính toán
+            float hieu = soA - soB;
+            //Hiện kết quả
 
-        String soThu1 =editTextSo1.getText().toString();
-        String soThu2 =editTextSo2.getText().toString();
-        float soA = Float.parseFloat(soThu1);
-        float soB = Float.parseFloat(soThu2);
-        //tính toán
-        float hieu = soA -soB;
-        //Hiện kết quả
-
-        String ketQua = String.valueOf(hieu);
-        editTextKetQua.setText(ketQua);
+            String ketQua = String.valueOf(hieu);
+            editTextKetQua.setText(ketQua);
+        }
+        catch (NumberFormatException e)
+        {
+            Toast.makeText(this, "Vui lòng nhập số hợp lệ", Toast.LENGTH_SHORT).show();
+        }
     }
     public void XuLyNhan(View v){
-        //Lấy dữ liệu
+        try {
+            String soThu1 = editTextSo1.getText().toString();
+            String soThu2 = editTextSo2.getText().toString();
+            float soA = Float.parseFloat(soThu1);
+            float soB = Float.parseFloat(soThu2);
+            //tính toán
+            float tich = soA * soB;
+            //Hiện kết quả
 
-        String soThu1 =editTextSo1.getText().toString();
-        String soThu2 =editTextSo2.getText().toString();
-        float soA = Float.parseFloat(soThu1);
-        float soB = Float.parseFloat(soThu2);
-        //tính toán
-        float tich = soA *soB;
-        //Hiện kết quả
-
-        String ketQua = String.valueOf(tich);
-        editTextKetQua.setText(ketQua);
+            String ketQua = String.valueOf(tich);
+            editTextKetQua.setText(ketQua);
+        }
+        catch (NumberFormatException e)
+        {
+            Toast.makeText(this, "Vui lòng nhập số hợp lệ", Toast.LENGTH_SHORT).show();
+        }
     }
     public void XuLyChia(View v){
 //Lấy dữ liệu
 
-        String soThu1 =editTextSo1.getText().toString();
-        String soThu2 =editTextSo2.getText().toString();
-        float soA = Float.parseFloat(soThu1);
-        float soB = Float.parseFloat(soThu2);
-        //tính toán
-        float thuong = soA /soB;
-        //Hiện kết quả
+        try {
+            String soThu1 = editTextSo1.getText().toString();
+            String soThu2 = editTextSo2.getText().toString();
+            float soA = Float.parseFloat(soThu1);
+            float soB = Float.parseFloat(soThu2);
+            //tính toán
+            float thuong = soA * soB;
+            //Hiện kết quả
 
-        String ketQua = String.valueOf(thuong);
-        editTextKetQua.setText(ketQua);
+            String ketQua = String.valueOf(thuong);
+            editTextKetQua.setText(ketQua);
+        }
+        catch (NumberFormatException e)
+        {
+            Toast.makeText(this, "Vui lòng nhập số hợp lệ", Toast.LENGTH_SHORT).show();
+        }
     }
 }

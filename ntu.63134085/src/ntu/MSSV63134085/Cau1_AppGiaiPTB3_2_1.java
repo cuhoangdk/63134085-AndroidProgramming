@@ -161,7 +161,9 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
             double x = -b / (2 * a);
             txtKQ.setText("Phương trình có nghiệm kép:\nx = " + x);
         } else {
-            
+        	double phanThat = -b / (2 * a);
+            double phanAo = Math.sqrt(Math.abs(delta)) / (2 * a);
+            txtKQ.setText("Phương trình có 2 nghiệm ảo:\nx1 = " + phanThat + " + i" + phanAo + "\nx2 = " + phanThat + " - i" + phanAo);
         }
 	}
 	void PTB1(double a, double b) {

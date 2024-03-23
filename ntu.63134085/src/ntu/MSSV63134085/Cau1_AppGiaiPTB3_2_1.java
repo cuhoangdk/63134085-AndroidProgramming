@@ -163,9 +163,14 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
             txtKQ.append("x2 = " + x2 + "\n");
             txtKQ.append("x3 = " + x3 + "\n");
         } else if (delta == 0) {
+            double nghiemDon = (-1 / (2 * a)) * (b + Math.signum(b) * Math.cbrt(c / Math.pow(Math.abs(b), 3) * 27 * a * a * a));
+            double nghiemKep = (-1 / (2 * a)) * (b - Math.signum(b) * Math.cbrt(c / Math.pow(Math.abs(b), 3) * 27 * a * a * a));
             
+            txtKQ.setText("Phương trình có 3 nghiệm trong đó có 2 nghiệm kép:\n");
+            txtKQ.append("x1 = " + nghiemDon + "\n");
+            txtKQ.append("x2 = x3 = " + nghiemKep + "\n");
         } else {
-            
+           
         }
 	}
 	void PTB2(double a, double b, double c) {

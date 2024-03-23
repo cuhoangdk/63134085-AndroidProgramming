@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Vui lòng nhập dữ liệu", Toast.LENGTH_SHORT).show();
         }
     }
-    void CommentChauA(double BMI){
+    void CommentChauAu(double BMI){
         String comment;
         if (BMI < 18.5) {
             comment = "Gầy";
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         }
         tvCmt.setText(comment);
     }
-    void CommentChauAu(double BMI){
+    void CommentChauA(double BMI){
         String comment;
         if (BMI < 18.5) {
             comment = "Gầy";
@@ -73,6 +73,10 @@ public class MainActivity extends AppCompatActivity {
             comment = "Thừa cân";
         } else if (BMI < 24.9) {
             comment = "Tiền béo phì";
+        } else if (BMI < 29.9) {
+            comment = "Béo phì độ I";
+        } else if (BMI < 40) {
+            comment = "Béo phì độ II";
         }
         tvCmt.setText(comment);
     }

@@ -36,51 +36,63 @@ public class MainActivity extends AppCompatActivity {
             double BMI = canNang/(chieuCao*chieuCao);
             edtKQ.setText(String.format("%.2f", BMI));
             if (r_chaua.isChecked()){
-                CommentChauA(BMI);
+                CommentChauA(BMI, canNang, chieuCao);
             }
-            else CommentChauAu(BMI);
+            else CommentChauAu(BMI, canNang, chieuCao);
         }
         catch (NumberFormatException e)
         {
             Toast.makeText(this, "Vui lòng nhập dữ liệu", Toast.LENGTH_SHORT).show();
         }
     }
-    void CommentChauAu(double BMI){
-        String comment;
+    void CommentChauAu(double BMI, double canNang, double chieuCao){
+        String comment, advice, fullText;
         if (BMI < 18.5) {
-            comment = "Gầy";
+            comment = "Bạn bị gầy";
         } else if (BMI < 24.5) {
-            comment = "Bình thường";
+            comment = "Bạn khoẻ mạnh";
         } else if (BMI < 25) {
-            comment = "Thừa cân";
+            comment = "Bạn thừa cân";
         } else if (BMI < 30) {
-            comment = "Tiền béo phì";
+            comment = "Bạn bị tiền béo phì";
         } else if (BMI < 35) {
-            comment = "Béo phì độ I";
+            comment = "Bạn bị béo phì độ I";
         } else if (BMI < 40) {
-            comment = "Béo phì độ II";
+            comment = "Bạn bị béo phì độ II";
         } else {
-            comment = "Béo phì độ III";
+            comment = "Bạn bị béo phì độ III";
         }
-        tvCmt.setText(comment);
+        if (BMI<18.5) {
+            advice = String.format("Bạn cần tăng thêm %.2f kg để đạt trạng thái khoẻ mạnh", (18.5 * chieuCao * chieuCao) - canNang);
+        }
+        else if (BMI < 24.5) {advice ="";}
+        else {advice = String.format("Bạn cần giảm đi %.2f kg để đạt trạng thái khoẻ mạnh", canNang - (24.5 * chieuCao * chieuCao) );}
+        fullText=comment+"\n"+advice;
+        tvCmt.setText(fullText);
     }
-    void CommentChauA(double BMI){
-        String comment;
+    void CommentChauA(double BMI, double canNang, double chieuCao){
+        String comment, advice, fullText;
         if (BMI < 18.5) {
-            comment = "Gầy";
+            comment = "Bạn bị gầy";
         } else if (BMI < 22.9) {
-            comment = "Bình thường";
+            comment = "Bạn khoẻ mạnh";
         } else if (BMI < 23) {
-            comment = "Thừa cân";
+            comment = "Bạn thừa cân";
         } else if (BMI < 24.9) {
-            comment = "Tiền béo phì";
+            comment = "Bạn bị tiền béo phì";
         } else if (BMI < 29.9) {
-            comment = "Béo phì độ I";
+            comment = "Bạn bị béo phì độ I";
         } else if (BMI < 40) {
-            comment = "Béo phì độ II";
+            comment = "Bạn bị béo phì độ II";
         } else {
-            comment = "Béo phì độ III";
+            comment = "Bạn bị béo phì độ III";
         }
-        tvCmt.setText(comment);
+        if (BMI<18.5) {
+            advice = String.format("Bạn cần tăng thêm %.2f kg để đạt trạng thái khoẻ mạnh", (18.5 * chieuCao * chieuCao) - canNang);
+        }
+        else if (BMI < 22.9) {advice ="";}
+        else {advice = String.format("Bạn cần giảm đi %.2f kg để đạt trạng thái khoẻ mạnh", canNang - (22.9 * chieuCao * chieuCao) );}
+        fullText=comment+"\n"+advice;
+        tvCmt.setText(fullText);
     }
 }

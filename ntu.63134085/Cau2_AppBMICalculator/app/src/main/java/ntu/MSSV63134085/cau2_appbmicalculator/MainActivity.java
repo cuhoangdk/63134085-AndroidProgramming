@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
             comment = "Gầy";
         } else if (BMI < 22.9) {
             comment = "Bình thường";
+        } else if (BMI < 23) {
+            comment = "Thừa cân";
         }
         tvCmt.setText(comment);
     }

@@ -77,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
             comment = "Béo phì độ I";
         } else if (BMI < 40) {
             comment = "Béo phì độ II";
+        } else {
+            comment = "Béo phì độ III";
         }
         tvCmt.setText(comment);
     }

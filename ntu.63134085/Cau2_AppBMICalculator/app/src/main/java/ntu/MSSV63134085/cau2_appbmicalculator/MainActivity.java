@@ -3,6 +3,7 @@ package ntu.MSSV63134085.cau2_appbmicalculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -28,12 +29,12 @@ public class MainActivity extends AppCompatActivity {
         edtCanNang = (EditText) findViewById(R.id.edtWeight);
         edtKQ = (EditText) findViewById(R.id.edtKQ);
     }
-    public void BMICalculator(){
+    public void BMICalculator(View v){
         try {
             double chieuCao = Double.parseDouble(edtChieuCao.getText().toString());
             double canNang = Double.parseDouble(edtCanNang.getText().toString());
             double BMI = canNang/(chieuCao*chieuCao);
-            edtKQ.setText(String.valueOf(BMI));
+            edtKQ.setText(String.format("%.2f", BMI));
             if (r_chaua.isChecked()){
                 CommentChauA(BMI);
             }

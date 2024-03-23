@@ -14,6 +14,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
+import java.awt.Color;
 
 public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
 
@@ -105,6 +106,9 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
 		contentPane.add(txtD);
 		
 		txtKQ = new JTextArea();
+		txtKQ.setBackground(new Color(0, 0, 0));
+		txtKQ.setForeground(new Color(255, 255, 255));
+		txtKQ.setFont(new Font("Monospaced", Font.PLAIN, 15));
 		txtKQ.setEnabled(false);
 		txtKQ.setToolTipText("");
 		txtKQ.setBounds(73, 198, 316, 65);
@@ -127,7 +131,17 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
             double b = Double.parseDouble(txtB.getText());
             double c = Double.parseDouble(txtC.getText());
             double d = Double.parseDouble(txtD.getText());
-            
+            if (a==0) {
+            	if (b==0) {
+            		PTB1(c,d);
+            	}
+            	else {
+            		PTB2(b,c,d);
+            	}
+            }
+            else {
+            	PTB3(a,b,c,d);
+            }
         } catch (NumberFormatException ex) {
         	txtKQ.setText("Vui lòng nhập tham số hợp lệ");
         }
@@ -139,6 +153,15 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
 		
 	}
 	void PTB1(double a, double b) {
-		
+		if (a == 0) {
+            if (b == 0) {
+            	txtKQ.setText("Phương trình có vô số nghiệm");
+            } else {
+            	txtKQ.setText("Phương trình vô nghiệm");
+            }
+        } else {
+            double x = -b / a;
+            txtKQ.setText("Phương trình có 1 nghiệm:\n x = " + x);
+        }
 	}
 }

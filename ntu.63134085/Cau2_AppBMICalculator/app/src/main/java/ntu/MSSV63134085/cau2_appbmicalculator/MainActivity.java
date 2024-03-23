@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     public void getControls(){
         r_chaua = (RadioButton) findViewById(R.id.radioChauA);
         r_chauau = (RadioButton) findViewById(R.id.radioChauAu);
-
         tvCmt = (TextView) findViewById(R.id.tvComment);
         edtChieuCao = (EditText) findViewById(R.id.edtHeight);
         edtCanNang = (EditText) findViewById(R.id.edtWeight);
@@ -35,11 +34,33 @@ public class MainActivity extends AppCompatActivity {
             double canNang = Double.parseDouble(edtCanNang.getText().toString());
             double BMI = canNang/(chieuCao*chieuCao);
             edtKQ.setText(String.valueOf(BMI));
-
+            if (r_chaua.isChecked()){
+                CommentChauA(BMI);
+            }
         }
         catch (NumberFormatException e)
         {
             Toast.makeText(this, "Vui lòng nhập dữ liệu", Toast.LENGTH_SHORT).show();
         }
     }
+    void CommentChauA(double BMI){
+        String comment;
+        if (BMI < 18.5) {
+            comment = "Gầy";
+        } else if (BMI < 24.5) {
+            comment = "Bình thường";
+        } else if (BMI < 25) {
+            comment = "Thừa cân";
+        } else if (BMI < 30) {
+            comment = "Tiền béo phì";
+        } else if (BMI < 35) {
+            comment = "Béo phì độ I";
+        } else if (BMI < 40) {
+            comment = "Béo phì độ II";
+        } else {
+            comment = "Béo phì độ III";
+        }
+        
+    }
+
 }

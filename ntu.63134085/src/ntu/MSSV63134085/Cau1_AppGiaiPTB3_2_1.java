@@ -158,7 +158,8 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
             double x2 = (-b - Math.sqrt(delta)) / (2 * a);
             txtKQ.setText("Phương trình có 2 nghiệm phân biệt:\nx1 = " + x1 + "\nx2 = " + x2);
         } else if (delta == 0) {
-            
+            double x = -b / (2 * a);
+            txtKQ.setText("Phương trình có nghiệm kép:\nx = " + x);
         } else {
             
         }

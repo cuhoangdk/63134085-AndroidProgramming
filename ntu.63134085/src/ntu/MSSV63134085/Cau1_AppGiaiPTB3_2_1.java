@@ -10,6 +10,7 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
+import javax.swing.JButton;
 
 public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
 
@@ -54,22 +55,22 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
 		
 		JLabel lblNewLabel_2 = new JLabel("Nhập a:");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_2.setBounds(10, 85, 68, 27);
+		lblNewLabel_2.setBounds(10, 66, 68, 27);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_2_1 = new JLabel("Nhập b:");
 		lblNewLabel_2_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_2_1.setBounds(10, 111, 68, 27);
+		lblNewLabel_2_1.setBounds(10, 92, 68, 27);
 		contentPane.add(lblNewLabel_2_1);
 		
 		JLabel lblNewLabel_2_2 = new JLabel("Nhập d:");
 		lblNewLabel_2_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_2_2.setBounds(10, 161, 68, 27);
+		lblNewLabel_2_2.setBounds(10, 142, 68, 27);
 		contentPane.add(lblNewLabel_2_2);
 		
 		JLabel lblNewLabel_2_3 = new JLabel("Nhập c:");
 		lblNewLabel_2_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_2_3.setBounds(10, 134, 68, 27);
+		lblNewLabel_2_3.setBounds(10, 115, 68, 27);
 		contentPane.add(lblNewLabel_2_3);
 		
 		JLabel lblNewLabel_2_4 = new JLabel("Kết quả:");
@@ -78,29 +79,35 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
 		contentPane.add(lblNewLabel_2_4);
 		
 		txtA = new JTextField();
-		txtA.setBounds(70, 85, 319, 25);
+		txtA.setBounds(70, 66, 319, 25);
 		contentPane.add(txtA);
 		txtA.setColumns(10);
 		
 		txtB = new JTextField();
 		txtB.setToolTipText("Nhập a,b=0 để giải phương trình bậc 1");
 		txtB.setColumns(10);
-		txtB.setBounds(70, 111, 319, 25);
+		txtB.setBounds(70, 92, 319, 25);
 		contentPane.add(txtB);
 		
 		txtC = new JTextField();
 		txtC.setColumns(10);
-		txtC.setBounds(70, 137, 319, 25);
+		txtC.setBounds(70, 118, 319, 25);
 		contentPane.add(txtC);
 		
 		txtD = new JTextField();
 		txtD.setColumns(10);
-		txtD.setBounds(70, 164, 319, 25);
+		txtD.setBounds(70, 145, 319, 25);
 		contentPane.add(txtD);
 		
 		JTextArea txtKQ = new JTextArea();
+		txtKQ.setEnabled(false);
 		txtKQ.setToolTipText("Nhập a=0 để giải phương trình bậc 2");
 		txtKQ.setBounds(73, 198, 316, 65);
 		contentPane.add(txtKQ);
+		
+		JButton btnNewButton = new JButton("GIẢI");
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnNewButton.setBounds(70, 173, 319, 21);
+		contentPane.add(btnNewButton);
 	}
 }

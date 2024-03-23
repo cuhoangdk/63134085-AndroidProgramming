@@ -23,6 +23,7 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
 	private JTextField txtB;
 	private JTextField txtC;
 	private JTextField txtD;
+	private JTextArea txtKQ;
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -82,6 +83,7 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
 		contentPane.add(lblNewLabel_2_4);
 		
 		txtA = new JTextField();
+		txtA.setToolTipText("Nhập a=0 để giải phương trình bậc 2");
 		txtA.setBounds(70, 66, 319, 25);
 		contentPane.add(txtA);
 		txtA.setColumns(10);
@@ -102,9 +104,9 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
 		txtD.setBounds(70, 145, 319, 25);
 		contentPane.add(txtD);
 		
-		JTextArea txtKQ = new JTextArea();
+		txtKQ = new JTextArea();
 		txtKQ.setEnabled(false);
-		txtKQ.setToolTipText("Nhập a=0 để giải phương trình bậc 2");
+		txtKQ.setToolTipText("");
 		txtKQ.setBounds(73, 198, 316, 65);
 		contentPane.add(txtKQ);
 		
@@ -112,14 +114,31 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
 		btnGiai.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//Code xử lý 
-				PTB3();
+				XuLyDuLieuNhap();
 			}
 		});
 		btnGiai.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnGiai.setBounds(70, 173, 319, 21);
 		contentPane.add(btnGiai);
 	}
-	void PTB3() {
+	void XuLyDuLieuNhap(){
+		try {
+            double a = Double.parseDouble(txtA.getText());
+            double b = Double.parseDouble(txtB.getText());
+            double c = Double.parseDouble(txtC.getText());
+            double d = Double.parseDouble(txtD.getText());
+            
+        } catch (NumberFormatException ex) {
+        	txtKQ.setText("Vui lòng nhập tham số hợp lệ");
+        }
+	}
+	void PTB3(double a, double b, double c, double d) {
+		
+	}
+	void PTB2(double a, double b, double c) {
+		
+	}
+	void PTB1(double a, double b) {
 		
 	}
 }

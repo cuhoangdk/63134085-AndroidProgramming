@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             if (r_chaua.isChecked()){
                 CommentChauA(BMI);
             }
+            else CommentChauAu(BMI);
         }
         catch (NumberFormatException e)
         {
@@ -60,7 +61,13 @@ public class MainActivity extends AppCompatActivity {
         } else {
             comment = "Béo phì độ III";
         }
-        
+        tvCmt.setText(comment);
     }
-
+    void CommentChauAu(double BMI){
+        String comment;
+        if (BMI < 18.5) {
+            comment = "Gầy";
+        }
+        tvCmt.setText(comment);
+    }
 }

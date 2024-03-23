@@ -133,26 +133,38 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
             double d = Double.parseDouble(txtD.getText());
             if (a==0) {
             	if (b==0) {
-            		PTB1(c,d);
+            		PTB1(c,d); //a,b = 0 giải phương tình bâc 1
             	}
             	else {
-            		PTB2(b,c,d);
+            		PTB2(b,c,d); // a=0 giải phương trình bậc 2
             	}
             }
             else {
-            	PTB3(a,b,c,d);
+            	PTB3(a,b,c,d); // giải phương trình bậc 3
             }
         } catch (NumberFormatException ex) {
-        	txtKQ.setText("Vui lòng nhập tham số hợp lệ");
+        	txtKQ.setText("Vui lòng nhập tham số hợp lệ"); // xử lý ngoại lệ
         }
 	}
 	void PTB3(double a, double b, double c, double d) {
 		
 	}
 	void PTB2(double a, double b, double c) {
-		
+		//hàm xử lý phương trình bậc 2
+		double delta = b*b - 4*a*c;
+
+    	if (delta > 0) {
+            double x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            double x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            txtKQ.setText("Phương trình có 2 nghiệm phân biệt:\nx1 = " + x1 + "\nx2 = " + x2);
+        } else if (delta == 0) {
+            
+        } else {
+            
+        }
 	}
 	void PTB1(double a, double b) {
+		// hàm xử lý phương trình bậc 1
 		if (a == 0) {
             if (b == 0) {
             	txtKQ.setText("Phương trình có vô số nghiệm");

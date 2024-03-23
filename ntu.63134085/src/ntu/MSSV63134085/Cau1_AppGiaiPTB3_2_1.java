@@ -147,7 +147,26 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
         }
 	}
 	void PTB3(double a, double b, double c, double d) {
+		//hàm xử lý phương trình bậc 3
+		//cách giải phương trình bậc 3 tham khảo từ: https://rdsic.edu.vn/blog/toan/giai-phuong-trinh-bac-3-phuong-phap-va-buoc-dau-tien-de-giai-quyet-vi-cb.html
 		
+		//∆ = b^2c^2 - 4ac^3 - 4b^3d - 27a^2d^2 + 18abcd
+		double delta = b * b * c * c - 4 * a * c * c * c - 4 * b * b * b * d - 27 * a * a * d * d + 18 * a * b * c * d;
+        if (delta > 0) {
+            double deltaCubit = Math.cbrt(delta + Math.sqrt(delta * delta - 4 * Math.pow(c, 3) * delta));
+            double x1 = (-1 / (2 * a)) * (b + deltaCubit) + Math.cbrt(deltaCubit);
+            double x2 = (-1 / (2 * a)) * (b - 0.5 * deltaCubit + (Math.sqrt(3) / 2) * Math.sqrt(4 * a * c - b * b + deltaCubit));
+            double x3 = (-1 / (2 * a)) * (b - 0.5 * deltaCubit - (Math.sqrt(3) / 2) * Math.sqrt(4 * a * c - b * b + deltaCubit));
+
+            txtKQ.setText("Phương trình có 3 nghiệm phân biệt:\n");
+            txtKQ.append("x1 = " + x1 + "\n");
+            txtKQ.append("x2 = " + x2 + "\n");
+            txtKQ.append("x3 = " + x3 + "\n");
+        } else if (delta == 0) {
+            
+        } else {
+            
+        }
 	}
 	void PTB2(double a, double b, double c) {
 		//hàm xử lý phương trình bậc 2

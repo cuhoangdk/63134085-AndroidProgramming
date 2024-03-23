@@ -7,6 +7,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
@@ -105,9 +108,18 @@ public class Cau1_AppGiaiPTB3_2_1 extends JFrame {
 		txtKQ.setBounds(73, 198, 316, 65);
 		contentPane.add(txtKQ);
 		
-		JButton btnNewButton = new JButton("GIẢI");
-		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnNewButton.setBounds(70, 173, 319, 21);
-		contentPane.add(btnNewButton);
+		JButton btnGiai = new JButton("GIẢI");
+		btnGiai.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Code xử lý 
+				PTB3();
+			}
+		});
+		btnGiai.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnGiai.setBounds(70, 173, 319, 21);
+		contentPane.add(btnGiai);
+	}
+	void PTB3() {
+		
 	}
 }

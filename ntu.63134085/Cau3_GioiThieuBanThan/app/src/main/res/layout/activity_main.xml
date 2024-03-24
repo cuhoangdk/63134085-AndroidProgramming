@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/fullbg">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +25,6 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginTop="-80dp"
-
             android:layout_weight="1"
             tools:srcCompat="@drawable/f1" />
         <TextView
@@ -70,5 +70,6 @@
             android:textSize="20dp"
             android:text="Sở thích: chơi osu!, xem anime, xem đá bóng">
         </TextView>
+
     </LinearLayout>
 </LinearLayout>

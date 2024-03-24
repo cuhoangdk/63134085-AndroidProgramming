@@ -40,6 +40,13 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             android:textSize="20dp"
+            android:text="Trường: Đại học Nha Trang">
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
             android:text="MSSV: 63134085">
         </TextView>
         <TextView

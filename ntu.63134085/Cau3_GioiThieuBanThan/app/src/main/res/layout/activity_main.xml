@@ -87,7 +87,12 @@
                 android:layout_height="70dp"
                 android:layout_margin="10dp"
                 android:src="@drawable/facebook"/>
-            
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/X"/>
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

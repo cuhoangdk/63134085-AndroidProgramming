@@ -20,13 +20,13 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
-            android:layout_marginTop="-70dp"
+            android:layout_marginTop="-80dp"
 
             android:layout_weight="1"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/f1" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -56,10 +56,19 @@
             android:textSize="20dp"
             android:text="Lớp: 63. CNTT-2">
         </TextView>
-
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:text="Email: hoang.ntv.63cntt@ntu.edu.vn">
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:text="Sở thích: chơi osu!, xem anime, xem đá bóng">
+        </TextView>
     </LinearLayout>
-
-
-
 </LinearLayout>

@@ -78,13 +78,13 @@ public class Cau1_AppGiaiPTB2_1 extends JFrame {
 		contentPane.add(lblNewLabel_2_4);
 		
 		txtA = new JTextField();
-		txtA.setToolTipText("Nhập a=0 để giải phương trình bậc 2");
+		txtA.setToolTipText("Nhập a=0 để giải phương trình bậc 1");
 		txtA.setBounds(70, 66, 319, 25);
 		contentPane.add(txtA);
 		txtA.setColumns(10);
 		
 		txtB = new JTextField();
-		txtB.setToolTipText("Nhập a,b=0 để giải phương trình bậc 1");
+		txtB.setToolTipText("");
 		txtB.setColumns(10);
 		txtB.setBounds(70, 92, 319, 25);
 		contentPane.add(txtB);
